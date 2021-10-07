@@ -1,0 +1,1 @@
+"use strict";$(function(){$.each(["手机","智慧屏","智能穿戴","耳机音箱","电脑","平板","智能路由","配件","生态产品","家用电器","美食酒饮","增值服务/企业商用"],function(n,a){$(".navTop").append('<a href="" class="navTopn">\n   <span>'.concat(a,'</span>\n   <svg class="icon youjiantou" aria-hidden="true">\n     <use xlink:href="#icon-youjiantou"></use>\n   </svg>\n </a>'))})});

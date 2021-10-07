@@ -1,0 +1,149 @@
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+.gouwuche {
+  width: 17px;
+  height: 17px;
+  color: #ddd;
+}
+.layui-rowNav {
+  background-color: #000;
+}
+.layui-breadcrumb > * {
+  font-size: 12px;
+}
+.layui-nav {
+  padding: 0;
+  height: 38px;
+  background-color: #000;
+}
+.layui-nav * {
+  font-size: 12px;
+}
+
+.layui-nav .layui-nav-item {
+  a {
+    color: rgba(255, 255, 255, 0.6);
+    padding: 0px 7px 0 7px;
+    margin-top: 12px;
+  }
+  line-height: 12px;
+}
+
+.layui-nav .layui-nav-more {
+  position: inherit;
+}
+.layui-nav-item {
+  height: 38px;
+  line-height: 38px;
+  & > a {
+    display: inline-block;
+
+    border-right: 1px solid #555;
+  }
+}
+.layui-navLast {
+  border-right: none !important ;
+}
+.layui-navColor:hover {
+  background-color: #fff;
+  & > a {
+    color: red !important ;
+  }
+}
+.layui-navColor:hover > a {
+  color: red !important ;
+}
+.layui-nav-child {
+  a {
+    color: #666 !important;
+  }
+  top: 38px;
+}
+
+.layui-nav-child-div {
+  width: 900px;
+}
+.layui-nav-child-div .layui-nav-child-1 {
+  float: left;
+  width: 90px;
+  border-right: 1px solid #eee;
+  padding-left: 20px;
+}
+.layui-nav-childLeft {
+  left: -600px;
+}
+.ulRight {
+  float: right;
+}
+
+.ulRight > .layui-nav-item > a {
+  padding: 0px 10px 0 10px;
+}
+.layui-colImg {
+  height: 35px;
+  padding-top: 20px;
+}
+.layui-rowNav1 {
+  height: 70px;
+}
+.navTwo {
+  font-size: 16px;
+
+  a {
+    margin-left: 37px;
+    line-height: 70px;
+  }
+}
+.sousuo {
+  width: 26px;
+  height: 26px;
+  color: #666;
+  margin-top: 20px;
+}
+.lunbo {
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  position: relative;
+  width: 100%;
+}
+.layui-carousel[lay-arrow="always"] .layui-carousel-arrow {
+  left: 336px;
+}
+.layui-carousel-ind {
+  top: -65px;
+}
+.navTop {
+  position: absolute;
+  padding-top: 8px;
+  top: 30px;
+  left: 120px;
+  width: 200px;
+  height: 450px;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  z-index: 1;
+}
+.navTopn {
+  display: inline-block;
+  height: 35px;
+  width: 100%;
+  &:hover {
+    background-color: #fff;
+  }
+}
+
+.navTopn :nth-child(1) {
+  float: left;
+  padding: 6px 0 0 18px;
+}
+.navTopn :nth-child(2) {
+  float: right;
+  padding: 8px 12px 0 0;
+}
