@@ -44,7 +44,7 @@ $(function () {
     let pid = data.pid
     $("#shopCar").click(function () {
       let num = inp.value
-      location.href = "car.html"
+      location.href = `car.html?uid=${uid}`
       $.get("http://jx.xuzhixiang.top/ap/api/add-product.php", { uid, pid, pnum: num }, (res) => {
         console.log(res)//添加购物车数据
       })

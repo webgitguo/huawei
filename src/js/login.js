@@ -54,15 +54,15 @@ $(function () {
           $("#inpBtn").text(count + "s后重新获取");
           count--;
         }
-      }, 1000);
+      }, 1000)
     })
   })
   $("#btnSubmit").click(function () {
     $.get("http://jx.xuzhixiang.top/ap/api/login.php",
       { username: $("#username").val(), password: $("#password").val() },
       (res) => {
-        //document.cookie = "id=" + res.data.id;
-        location.href = `index.html?username=${res.data.username}`
+        document.cookie = "id=" + res.data.id;
+        location.href = `index.html?username=${res.data.username}&${res.data.id}`
         console.log(res)
       })
   })

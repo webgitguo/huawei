@@ -1,5 +1,5 @@
 $(function () {
-  $.get(`http://jx.xuzhixiang.top/ap/api/cart-list.php?id=68590`, (res) => {
+  $.get(`http://jx.xuzhixiang.top/ap/api/cart-list.php?id=69059`, (res) => {
     console.log(res)//查询购物车数据
     let data = res.data
 
@@ -27,6 +27,7 @@ $(function () {
     for (let i = 0; i < data.length; i++) {
       let uid = data[i].uid
       let pid = data[i].pid
+      console.log(uid)
       $(".minus").eq(i).click(function () {
         num[i].value--;
         $(".perTotalPrice").eq(i).text(data[i].pprice * num[i].value)
@@ -51,7 +52,7 @@ $(function () {
         //删数据  id  delete
         console.log($(".List"))
         let pid = $(".List").eq(i).attr("data-id");
-        $.get("http://jx.xuzhixiang.top/ap/api/cart-delete.php", { uid: 68590, pid }, (res) => {
+        $.get("http://jx.xuzhixiang.top/ap/api/cart-delete.php", { uid, pid }, (res) => {
           console.log(res)//添加购物车数据
         })
         //更新总价

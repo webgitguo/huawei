@@ -11,12 +11,12 @@ $(function () {
         //当倒计时结束，这里要清除定时器
         clearTimeout(interval);
       } else {
-        $("#inpBtn").text(count + "s后重新获取");
+        $("#inpBtn").text(count + "s后重新获取")
         count--;
       }
-    }, 1000);
+    }, 1000)
   })
-  $("#btnSubmit").click(function () {
+  $("#btnsubmit").click(function () {
     $.get("http://jx.xuzhixiang.top/ap/api/reg.php",
       { username: $("#username").val(), password: $("#password").val() },
       (res) => {

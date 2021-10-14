@@ -1,11 +1,15 @@
 $(function () {
   let search = window.location.search
-  let username = search.split("=")
 
-  if (username[1]) {
-    $("#login").html(`<p>${username[1]} 欢迎你</p>`)
+  let arr = search.split("=")
+  let username = arr[1].split("&")
+  let uid = username[1]
+  console.log(uid)
+  if (username[0]) {
+    $("#login").html(`<p>${username[0]} 欢迎你</p>`)
     $("#zhuce").html("退出")
   }
+
   let arr = ["手机", "智慧屏", "智能穿戴", "耳机音箱", "电脑", "平板", "智能路由", "配件", "生态产品", "家用电器", "美食酒饮", "增值服务/企业商用"]
   let obj = { srcImg: "img/navlist.png", name: "HuaWieMate系列" }
   function unScroll() {//禁用滚动条
@@ -131,8 +135,8 @@ $(function () {
     $(e.target).css({ fontSize: "24px", color: "#000" }).siblings().css({ fontSize: "20px" })
   })
 
-  function getData(num, id) {//获取列表数据
-    $.get({ url: `http://jx.xuzhixiang.top/ap/api/productlist.php?pagesize=8&pagenum=${num}`, data: { uid: "68590" } }, (res) => {
+  function getData(num, id, uid) {//获取列表数据
+    $.get({ url: `http://jx.xuzhixiang.top/ap/api/productlist.php?pagesize=8&pagenum=${num}`, data: { uid } }, (res) => {
       //console.log(res.data);
       let str = '';
       let data = res.data;
@@ -154,7 +158,7 @@ $(function () {
   function clickEvent(num, id, id1, callback) {
     $(id1).click(function () {
       $(id).empty()
-      getData(num, id)
+      getData(num, id, uid)
       callback = callback
       if (callback == "timer") {
         setTimeout(function () {//需要等数据加载之后才可以获取到属性
@@ -163,7 +167,7 @@ $(function () {
       }
     })
   }
-  getData(9, "#layui-rowContd3")
+  getData(9, "#layui-rowContd3", uid)
   clickEvent(9, "#layui-rowContd3", "#pho")
   /*   $("#pho").click(function () {
       $("#layui-rowContd3").empty()
@@ -179,7 +183,7 @@ $(function () {
      $("#layui-rowContd3").empty()
      getData(6, "#layui-rowContd3")
    }) */
-  getData(8, "#layui-rowContd4")
+  getData(8, "#layui-rowContd4", uid)
   clickEvent(5, "#layui-rowContd4", "#biao")
   /*  $("#biao").click(function () {
      $("#layui-rowContd4").empty()
@@ -195,11 +199,11 @@ $(function () {
      $("#layui-rowContd4").empty()
      getData(8, "#layui-rowContd4")
    }) */
-  getData(3, "#layui-rowContd5")
+  getData(3, "#layui-rowContd5", uid)
   $("#shengtai").click(function () {
     $("#layui-rowContd5").empty()
     $("#layui-rowContd5").append(`<a href=""><img class="teshu" src="img/1.png" alt="" /></a>`)
-    getData(3, "#layui-rowContd5")
+    getData(3, "#layui-rowContd5", uid)
   })
   clickEvent(2, "#layui-rowContd5", "#jinghua", "timer")
   /* $("#jinghua").click(function () {
@@ -218,11 +222,11 @@ $(function () {
         $("#layui-rowContd5 .layuiImglist").css({ width: "271px", height: "373px" })
       }, 100)
     }) */
-  getData(0, "#layui-rowContd6")
+  getData(0, "#layui-rowContd6", uid)
   $("#meishi").click(function () {
     $("#layui-rowContd6").empty()
     $("#layui-rowContd6").append(`<a href=""><img class="teshu" src="img/2.png" alt="" /></a>`)
-    getData(0, "#layui-rowContd6")
+    getData(0, "#layui-rowContd6", uid)
   })
   clickEvent(1, "#layui-rowContd6", "#meijiu", "timer")
   clickEvent(2, "#layui-rowContd6", "#liangshi", "timer")
@@ -239,7 +243,7 @@ $(function () {
 
     })
   })
-  $.get(`http://jx.xuzhixiang.top/ap/api/cart-list.php?id=68590`, (res) => {
+  $.get(`http://jx.xuzhixiang.top/ap/api/cart-list.php?id=${uid}`, (res) => {
 
     let data = res.data
     let str = ""
