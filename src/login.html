@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>用户登录</title>
+    <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css" />
+    <script src="//unpkg.com/layui@2.6.8/dist/layui.js"></script>
+    <script src="//at.alicdn.com/t/font_2804641_387pslkkyzs.js"></script>
+    <link rel="stylesheet" href="all.css" />
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="all.js"></script>
+  </head>
+
+  <body>
+    <div class="all">
+      <div class="head">
+        <div class="layui-row">
+          <div class="layui-col-md2">&nbsp;</div>
+          <div class="layui-col-md9">
+            <div class="head-svg">
+              <a href="index.html">
+                <svg class="icon suning" aria-hidden="true">
+                  <use xlink:href="#icon-suning"></use>
+                </svg>
+              </a>
+
+              <p class="head-p">
+                依据《网络安全法》，为保障您的账户安全和正常使用，请尽快完成手机号绑定验证！<a
+                  href="https://sale.suning.com/all/regProtocol/yssm.html"
+                  >《隐私政策》</a
+                >已上线，将更有利于保护您的个人隐私。
+              </p>
+            </div>
+
+            <div class="head-a">
+              <a href="https://qss.suning.com/ea486.htm">
+                <svg class="icon bi" aria-hidden="true">
+                  <use xlink:href="#icon-bi"></use>
+                </svg>
+                <span>我想对“登录”提意见</span>
+              </a>
+            </div>
+          </div>
+          <div class="layui-col-md1">&nbsp;</div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="layui-row">
+          <div class="layui-col-md2">&nbsp;</div>
+          <div class="layui-col-md9">
+            <div class="content-img">
+              <a href="index.html">
+                <img src="img/login.png" alt="" />
+              </a>
+            </div>
+            <div class="content-form">
+              <form action="">
+                <div
+                  class="layui-tab layui-tab-brief"
+                  lay-filter="docDemoTabBrief"
+                >
+                  <ul class="layui-tab-title">
+                    <li class="layui-this layui-form-li">扫码登录</li>
+                    <li class="">账户登录</li>
+                  </ul>
+                  <div class="layui-tab-content" style="height: 100px">
+                    <div class="layui-tab-item layui-show">
+                      <img src="img/weima.png" alt="" />
+                      <!-- <img src="img/weima1.png" alt=""> -->
+                      <div class="div-login">
+                        <div class="div-login1">
+                          <svg class="icon saoyisao" aria-hidden="true">
+                            <use xlink:href="#icon-saoyisao"></use>
+                          </svg>
+                          <span
+                            >打开<a
+                              class="div-login1-a"
+                              href="https://phb.suning.com/phbGdy.html"
+                              >苏宁易购APP</a
+                            >
+                            扫码登录</span
+                          >
+                        </div>
+                        <p class="p-login">
+                          <a href="./register.html">注册 有惊喜 ></a>
+                        </p>
+                        <div class="div-login1">
+                          <div class="bor"></div>
+                          <div class="bor1">使用以下账号登录</div>
+                          <div class="bor"></div>
+                        </div>
+                        <div class="div-logo">
+                          <a
+                            class="a-logo"
+                            href="https://graph.qq.com/oauth2.0/show"
+                          >
+                            <svg class="icon QQ" aria-hidden="true">
+                              <use xlink:href="#icon-QQ"></use>
+                            </svg>
+                            <span>QQ</span>
+                          </a>
+                          <a
+                            class="a-logo"
+                            href="https://open.weixin.qq.com/connect/qrconnect"
+                          >
+                            <svg class="icon weixin" aria-hidden="true">
+                              <use xlink:href="#icon-weixin"></use>
+                            </svg>
+                            <span>微信</span>
+                          </a>
+                          <a
+                            class="a-logo"
+                            href="https://paypassport.suning.com/ids/login"
+                          >
+                            <svg class="icon yi" aria-hidden="true">
+                              <use xlink:href="#icon-yi"></use>
+                            </svg>
+                            <span>易付宝</span>
+                          </a>
+                          <a
+                            class="a-logo"
+                            href="https://api.weibo.com/oauth2/authorize"
+                          >
+                            <svg class="icon weibo" aria-hidden="true">
+                              <use xlink:href="#icon-weibo"></use>
+                            </svg>
+                            <span>微博</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-tab-item">
+                      <div id="divInp">
+                        <div class="div-input">
+                          <svg class="icon ren" aria-hidden="true">
+                            <use xlink:href="#icon-ren"></use>
+                          </svg>
+                          <input
+                            type="text"
+                            id="username"
+                            placeholder="用户名/手机/邮箱"
+                          />
+                        </div>
+                        <div class="div-input">
+                          <svg class="icon suo" aria-hidden="true">
+                            <use xlink:href="#icon-suo"></use>
+                          </svg>
+                          <input
+                            type="password"
+                            id="password"
+                            placeholder="密码"
+                          />
+                        </div>
+                      </div>
+                      <div class="div-shouji">
+                        <a class="a-shouji" href="#" id="messageLogin">
+                          <svg class="icon shouji1" aria-hidden="true">
+                            <use xlink:href="#icon-shouji1"></use>
+                          </svg>
+                          <span id="spanMessage">短信验证码登录</span>
+                        </a>
+                        <a
+                          class="a-mima"
+                          href="https://aq.suning.com/asc/forgetpsw.do"
+                          >忘记密码?</a
+                        >
+                      </div>
+                      <a class="inp-submit" id="btnSubmit">登录</a>
+                      <div class="div-all">
+                        <p class="p-login">
+                          <a href="./register.html">注册 有惊喜 ></a>
+                        </p>
+                        <div class="div-login1">
+                          <div class="bor"></div>
+                          <div class="bor1">使用以下账号登录</div>
+                          <div class="bor"></div>
+                        </div>
+                        <div class="div-logo">
+                          <a class="a-logo" href="">
+                            <svg class="icon QQ" aria-hidden="true">
+                              <use xlink:href="#icon-QQ"></use>
+                            </svg>
+                            <span>QQ</span>
+                          </a>
+                          <a class="a-logo" href="">
+                            <svg class="icon weixin" aria-hidden="true">
+                              <use xlink:href="#icon-weixin"></use>
+                            </svg>
+                            <span>微信</span>
+                          </a>
+                          <a class="a-logo" href="">
+                            <svg class="icon yi" aria-hidden="true">
+                              <use xlink:href="#icon-yi"></use>
+                            </svg>
+                            <span>易付宝</span>
+                          </a>
+                          <a class="a-logo" href="">
+                            <svg class="icon weibo" aria-hidden="true">
+                              <use xlink:href="#icon-weibo"></use>
+                            </svg>
+                            <span>微博</span>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="layui-col-md1">&nbsp;</div>
+        </div>
+      </div>
+      <div id="foot"></div>
+    </div>
+
+    <script>
+      $("#foot").load("./commonFoot.html");
+    </script>
+  </body>
+</html>

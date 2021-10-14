@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="//unpkg.com/layui@2.6.8/dist/css/layui.css" />
     <link rel="stylesheet" href="all.css" />
-    <script src="//at.alicdn.com/t/font_2850545_8ed5dk6ebsn.js"></script>
+    <script src="//at.alicdn.com/t/font_2850545_1cnir5kmfiw.js"></script>
     <script src="layui.js"></script>
     <script src="jquery.js"></script>
     <script src="all.js"></script>
@@ -59,10 +59,10 @@
         <div class="layui-col-xs5 layui-col-sm5 layui-col-md5">
           <ul class="layui-nav ulRight" lay-bar="disabled">
             <li class="layui-nav-item">
-              <a href="" class="layui-navLast">请登录</a>
+              <a href="login.html" class="layui-navLast" id="login">请登录</a>
             </li>
             <li class="layui-nav-item">
-              <a href="">注册</a>
+              <a href="register.html" id="zhuce">注册</a>
             </li>
             <li class="layui-nav-item"><a href="">我的订单</a></li>
             <li class="layui-nav-item layui-navColor">
@@ -149,9 +149,11 @@
               </dl>
             </li>
             <li class="layui-nav-item layui-navColor">
-              <a href="" class="layui-navLast">购物车(0)</a>
-              <dl class="layui-nav-child">
-                <dd><img src="img/cart-big.svg" alt="" />空空如也</dd>
+              <a href="" class="layui-navLast"
+                >购物车(<span class="num">0</span>)</a
+              >
+              <dl class="layui-nav-child" id="gouwuList">
+                <dd><img src="img/cart-big.svg" alt="" /></dd>
               </dl>
             </li>
           </ul>
@@ -161,7 +163,7 @@
       <div class="layui-row layui-rowNav1">
         <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
         <div class="layui-col-xs2 layui-col-sm2 layui-col-md2">
-          <img class="layui-colImg" src="img/logo.png" alt="" />
+          <a href=""> <img class="layui-colImg" src="img/logo.png" alt="" /></a>
         </div>
         <div class="layui-col-xs7 layui-col-sm7 layui-col-md7">
           <div class="navTwo">
@@ -173,12 +175,49 @@
             <a href="">HarmonyOs</a>
           </div>
         </div>
+        <div class="layui-row layui-rowNav11">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div class="layui-col-xs2 layui-col-sm2 layui-col-md2">
+            <a href="">
+              <img class="layui-colImg" src="img/logo.png" alt=""
+            /></a>
+          </div>
+          <div class="layui-col-xs7 layui-col-sm7 layui-col-md7">
+            <div class="navTwo">
+              <a href="">华为专区</a>
+              <a href="">鸿蒙智联</a>
+              <a href="">全球甄选</a>
+              <a href="">家电家装馆</a>
+              <a href="">华为智选</a>
+              <a href="">HarmonyOs</a>
+            </div>
+          </div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">
+            <svg class="icon sousuo" id="sousuo1" aria-hidden="true">
+              <use xlink:href="#icon-sousuo"></use>
+            </svg>
+          </div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
         <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">
-          <svg class="icon sousuo" aria-hidden="true">
+          <svg class="icon sousuo" id="sousuo" aria-hidden="true">
             <use xlink:href="#icon-sousuo"></use>
           </svg>
         </div>
         <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+      </div>
+      <div class="navInp">
+        <a href="#">
+          <svg class="icon sousuo" aria-hidden="true">
+            <use xlink:href="#icon-sousuo"></use>
+          </svg>
+        </a>
+        <input type="text" placeholder="搜索商品" />
+        <a href="#">
+          <svg class="icon cuo" aria-hidden="true">
+            <use xlink:href="#icon-cuo"></use>
+          </svg>
+        </a>
       </div>
       <div class="lunbo">
         <div class="navTop">
@@ -189,7 +228,8 @@
             </svg>
           </a> -->
         </div>
-        <div class="layui-carousel" id="test10">
+        <div class="navTop1"></div>
+        <div class="layui-carousel" id="test1">
           <div carousel-item="">
             <div>
               <a href="">
@@ -209,9 +249,195 @@
           </div>
         </div>
       </div>
+      <div class="conter">
+        <div class="layui-row layui-rowCont">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div
+            class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-contList"
+          ></div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
+
+        <div class="layui-row">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div
+            class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-rowCont1"
+          ></div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
+        <div class="layui-row">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div class="layui-col-xs10 layui-col-sm10 layui-col-md10">
+            <h3 class="layui-rowCont2h3">爆款推荐</h3>
+            <div class="layui-rowCont2">
+              <a href="#" class="contImgFirst">
+                <img src="img/cont1.webp" alt="" />
+              </a>
+              <a href="#" class="contImgLast">
+                <img src="img/cont.png" alt="" />
+                <p><span>新品上市</span>MateBook 13s</p>
+                <p>享3期免息</p>
+                <p>￥6999</p>
+              </a>
+            </div>
+          </div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
+        <div class="layui-row">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div class="layui-col-xs10 layui-col-sm10 layui-col-md10">
+            <div class="layui-carousel" id="test2">
+              <div carousel-item="">
+                <div>
+                  <a href="">
+                    <img src="img/lunboc1.webp" />
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="img/lunboc2.webp" />
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <img src="img/lunboc3.webp" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
+        <div class="layui-row">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div
+            class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-rowCont3"
+          >
+            <div class="layuiConttit">
+              <a href="javascript:void(0)" id="pho">手机</a>
+              <a href="javascript:void(0)" id="zhihui">智慧屏</a>
+              <a href="javascript:void(0)" id="ipad">精品平板</a>
+              <a href="javascript:void(0)">更多></a>
+            </div>
+            <div class="layui-rowContd3" id="layui-rowContd3"></div>
+          </div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
+
+        <div class="layui-row">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div
+            class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-rowCont3"
+          >
+            <div class="layuiConttit">
+              <a href="javascript:void(0)" id="VR">智能穿戴&VR</a>
+              <a href="javascript:void(0)" id="biao">智能手表</a>
+              <a href="javascript:void(0)" id="huan">智能手环</a>
+              <a href="javascript:void(0)">更多></a>
+            </div>
+            <div class="layui-rowContd3" id="layui-rowContd4"></div>
+          </div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
+        <div class="layui-row">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div
+            class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-rowCont4 layui-rowCont3"
+          >
+            <div class="layuiConttit">
+              <a href="javascript:void(0)" id="shengtai">生态精品</a>
+              <a href="javascript:void(0)" id="jinghua">净化器</a>
+              <a href="javascript:void(0)" id="suo">智能门锁</a>
+              <a href="javascript:void(0)">更多></a>
+            </div>
+            <div class="layui-rowContd3" id="layui-rowContd5">
+              <a href=""><img class="teshu" src="img/1.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
+        <div class="layui-row">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div
+            class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-rowCont4 layui-rowCont3"
+          >
+            <div class="layuiConttit">
+              <a href="javascript:void(0)" id="meishi">美食酒饮</a>
+              <a href="javascript:void(0)" id="meijiu">甄选美酒</a>
+              <a href="javascript:void(0)" id="liangshi">严选粮食</a>
+              <a href="javascript:void(0)">更多></a>
+            </div>
+            <div class="layui-rowContd3" id="layui-rowContd6">
+              <a href=""><img class="teshu" src="img/2.png" alt="" /></a>
+            </div>
+          </div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
+      </div>
+      <div class="foot">
+        <div class="layui-row">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div
+            class="layui-col-xs10 layui-col-sm10 layui-col-md10 layui-col-foot"
+          >
+            <a href="" class="layuiFoot">
+              <img src="img/svg.png" alt="" />
+              <span>百强企业 品质保证</span>
+            </a>
+            <a href="" class="layuiFoot">
+              <img src="img/svg.png" alt="" />
+              <span>7天退货 15天换货</span>
+            </a>
+            <a href="" class="layuiFoot">
+              <img src="img/svg.png" alt="" />
+              <span>48元起免运费</span>
+            </a>
+            <a href="" class="layuiFoot">
+              <img src="img/svg.png" alt="" />
+              <span>2000家服务店 全国联保</span>
+            </a>
+          </div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
+        <div class="layui-row">
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+          <div class="layui-col-xs10 layui-col-sm10 layui-col-md10">
+            <div id="foot"></div>
+          </div>
+          <div class="layui-col-xs1 layui-col-sm1 layui-col-md1">&nbsp;</div>
+        </div>
+      </div>
+      <div class="float">
+        <a href="car.html">
+          <span id="gouwuIcon"></span>
+          <svg class="icon gouwu" aria-hidden="true">
+            <use xlink:href="#icon-gouwuche2"></use>
+          </svg>
+          <p>购物车</p>
+        </a>
+        <a href="">
+          <svg class="icon zaiian" aria-hidden="true">
+            <use xlink:href="#icon-zaixianzixun"></use>
+          </svg>
+          <p>在线客服</p>
+        </a>
+        <a href="">
+          <svg class="icon zizhu" aria-hidden="true">
+            <use xlink:href="#icon-wode-zizhufuwu"></use>
+          </svg>
+          <p>自助服务</p>
+        </a>
+        <a href="" class="floatTop">
+          <svg class="icon dingbu" aria-hidden="true">
+            <use xlink:href="#icon-dingbu"></use>
+          </svg>
+          <p>返回顶部</p>
+        </a>
+      </div>
     </div>
   </body>
   <script>
+    $("#foot").load("./commonFoot.html");
     layui.use("element", function () {
       var element = layui.element;
 
@@ -221,25 +447,19 @@
       var carousel = layui.carousel,
         form = layui.form;
       carousel.render({
-        elem: "#test10",
+        elem: "#test1",
         arrow: "always",
         width: "1366px",
         height: "500px",
         interval: 4000,
       });
-    });
+      carousel.render({
+        elem: "#test2",
 
-    /*  $(function () {
-          $.get("http://jx.xuzhixiang.top/ap/api/productlist.php", (res) => {
-            //console.log(res.data);
-            $.each(res.data, (i, n) => {
-              let data = res.data;
-              $("div").append(`
-              <p>${data[i].pname}</p>
-               <img src="${data[i].pimg}"/>
-              `);
-            });
-          });
-        }) */
+        width: "100%",
+        height: "100px",
+        interval: 4000,
+      });
+    });
   </script>
 </html>

@@ -1,0 +1,148 @@
+body {
+  font-family: "microsoft yahei";
+  background-color: rgb(248, 248, 248);
+  font-size: 12px;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+div.big {
+  max-width: 860px;
+  height: 450px;
+
+  margin: 0 auto;
+}
+div.title {
+  max-width: 860px;
+  height: 76px;
+}
+div.bottom {
+  height: 450px;
+  background-color: white;
+  border: 1px solid #c0c0c0;
+  border-top: 3px solid #f90;
+}
+div.small {
+  max-width: 333px;
+  margin: 0 auto;
+}
+div.text {
+  float: left;
+  font-size: 18px;
+  color: rgb(102, 105, 102);
+  line-height: 76px;
+}
+div.text2 {
+  float: left;
+  line-height: 20px;
+}
+div.input {
+  margin: 0 auto;
+  margin-top: 50px;
+  max-width: 333px;
+}
+div.liwu {
+  font-size: 14px;
+  margin: 0 auto;
+  line-height: 20px;
+}
+div.phone {
+  border: 1px solid #c0c0c0;
+  max-width: 333px;
+  height: 37px;
+  margin-bottom: 28px;
+}
+div.phone_1 {
+  height: 34px;
+  width: 250px;
+  float: left;
+}
+div.phone_2 {
+  height: 34px;
+  width: 120px;
+  float: left;
+}
+div.phone_3 {
+  line-height: 36px;
+  width: 120px;
+  float: right;
+  background-color: rgb(245, 245, 245);
+  text-align: center;
+}
+div.submit {
+  width: 333px;
+  margin-top: 60px;
+  height: 37px;
+}
+div.qiye {
+  margin-top: 5px;
+  width: 333px;
+  height: 19px;
+  margin-bottom: 25px;
+}
+
+a.logo {
+  float: left;
+  margin-right: 20px;
+}
+a.login {
+  color: #333333;
+  float: right;
+  margin-top: 50px;
+}
+a.qiye {
+  color: #1afa29;
+  line-height: 19px;
+}
+a.login:hover,
+a.code:hover,
+a.list:hover {
+  color: rgb(225, 105, 0);
+}
+
+a.code {
+  color: #333333;
+  font-size: 13px;
+}
+img.liwu {
+  width: 18px;
+  height: 18px;
+  float: left;
+}
+img.home {
+  width: 16px;
+  height: 16px;
+}
+label.head {
+  float: left;
+  width: 70px;
+  margin-left: 8px;
+  line-height: 37px;
+}
+input.phone {
+  height: 100%;
+  width: 100%;
+}
+input.submit {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 85, 0);
+}
+input {
+  border: 0px;
+  background: 0px;
+  outline: 0;
+  background-color: white;
+}
+input[placeholder] {
+  font-family: "microsoft yahei";
+  font-size: 12px;
+  color: rgb(202, 202, 202);
+}
+input[value] {
+  font-size: 18px;
+  color: white;
+}
+a {
+  text-decoration: none;
+}

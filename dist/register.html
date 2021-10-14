@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>苏宁易购</title>
+    <script src="//at.alicdn.com/t/font_2804641_387pslkkyzs.js"></script>
+    <link rel="stylesheet" href="all.css" />
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="all.js"></script>
+  </head>
+  <body>
+    <div class="big">
+      <div class="title">
+        <a href="https://www.suning.com/" class="logo">
+          <svg class="icon suning" aria-hidden="true">
+            <use xlink:href="#icon-suning"></use></svg
+        ></a>
+        <a href="login.html" class="login">我已经注册，马上登录></a>
+        <div class="text">欢迎注册</div>
+      </div>
+      <div class="bottom">
+        <div class="input">
+          <div class="liwu">
+            <svg class="icon liwu" aria-hidden="true">
+              <use xlink:href="#icon-liwu"></use>
+            </svg>
+
+            <div class="text2"></div>
+            注册领<strong style="color: #ff4400">199</strong>元大礼包
+          </div>
+          <br />
+          <form action="" method="post">
+            <div class="phone">
+              <label class="head">手机号</label>
+              <div class="phone_1">
+                <input
+                  id="username"
+                  type="text"
+                  class="phone"
+                  maxlength="11"
+                  placeholder="建议使用常用的手机号"
+                />
+              </div>
+            </div>
+            <div class="phone">
+              <label class="head">手机验证码</label>
+              <div class="phone_2">
+                <input
+                  type="text"
+                  class="phone"
+                  placeholder="请输入手机验证码"
+                />
+              </div>
+              <div class="phone_3">
+                <a href="#" class="code" id="inpBtn">获取短信验证码</a>
+              </div>
+            </div>
+            <div class="phone">
+              <label class="head">设置密码</label>
+              <div class="phone_1">
+                <input
+                  type="password"
+                  id="password"
+                  class="phone"
+                  maxlength="11"
+                  placeholder="请输入密码"
+                />
+              </div>
+            </div>
+            <div class="submit">
+              <input
+                type="button"
+                value="提交注册"
+                class="submit"
+                id="btnSubmit"
+              />
+            </div>
+            <!-- <div class="qiye">
+							<a href="https://reg.suning.com/company.do" class="qiye"><img src="img/楼房-大厦.png" class="home"> 企业用户注册></a>
+						</div> -->
+          </form>
+        </div>
+      </div>
+      <div id="foot"></div>
+    </div>
+    <script>
+      $("#foot").load("./commonFoot.html");
+    </script>
+  </body>
+</html>

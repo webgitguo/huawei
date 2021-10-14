@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+head {
+  position: relative;
+}
+.head-svg {
+  height: 90px;
+  margin-top: 25px;
+  margin-left: -20px;
+}
+.suning {
+  float: left;
+  height: 55px;
+}
+.head-p {
+  a {
+    color: #ff6600;
+  }
+  float: left;
+  border: 1px solid #fecd66;
+  margin-left: 10px;
+  margin-top: 15px;
+  padding: 4px 4px 4px 4px;
+}
+.head-a {
+  position: absolute;
+  right: 75px;
+  top: 70px;
+}
+.head-a a:hover {
+  color: #ff6600;
+}
+.content {
+  height: 700px;
+  width: 100%;
+  background-color: #ffd237;
+}
+.content-img {
+  float: left;
+  margin-top: 40px;
+}
+.content-form {
+  float: left;
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 360px;
+  height: 390px;
+  background-color: #fff;
+}
+.layui-form-li {
+  border-right: 1px solid#ccc;
+}
+.layui-tab-title li {
+  line-height: 25px;
+  font-size: 16px;
+  width: 50%;
+  padding: 0;
+}
+.layui-tab-brief > .layui-tab-title .layui-this {
+  color: #ff6600;
+}
+.layui-show img {
+  margin-left: 110px;
+}
+.div-login {
+  width: 360px;
+}
+.p-login {
+  text-align: center;
+  margin-top: 15px;
+  a {
+    color: #ff6600;
+  }
+}
+.div-login a:hover {
+  color: #ff6600;
+  text-decoration: underline;
+}
+.div-login1 {
+  text-align: center;
+  margin-top: 30px;
+  height: 20px;
+}
+.bor {
+  float: left;
+  width: 95px;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 18px;
+}
+.bor1 {
+  float: left;
+  margin-top: -10px;
+  color: #aaa;
+}
+.div-login1-a {
+  color: #ff6600;
+}
+.div-logo {
+  padding-left: 20px;
+}
+.a-logo {
+  border-right: 1px solid#ccc;
+  margin-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+}
+.div-input {
+  input {
+    border: 0;
+  }
+  border: 1px solid #ccc;
+  width: 80%;
+  height: 35px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.div-input input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+.ren,
+.suo {
+  margin: 6px 0 0 5px;
+}
+.div-all {
+  margin-top: 0px;
+}
+.div-shouji {
+  height: 30px;
+  padding-top: 30px;
+}
+.a-shouji {
+  &:hover span {
+    color: #ff6600;
+  }
+  float: left;
+  padding-left: 30px;
+}
+.a-mima {
+  &:hover {
+    color: #ff6600;
+  }
+  float: right;
+  padding-right: 40px;
+}
+.inp-submit {
+  &:hover {
+    color: #fff;
+  }
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  width: 80%;
+  background-color: #ff6600;
+  border: 0;
+  margin-left: 30px;
+  height: 40px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.inp-btn {
+  display: inline-block;
+  width: 100px;
+  opacity: 0.7;
+  background-color: #cccccc;
+  line-height: 35px;
+  text-align: center;
+  margin-left: 26px;
+}

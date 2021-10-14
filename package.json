@@ -20,5 +20,9 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.39.2"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "layui": "^2.6.8"
   }
 }
