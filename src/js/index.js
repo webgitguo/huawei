@@ -1,15 +1,38 @@
 $(function () {
   let search = window.location.search
-
-  let arr = search.split("=")
-  let username = arr[1].split("&")
-  let uid = username[1]
-  console.log(uid)
-  if (username[0]) {
-    $("#login").html(`<p>${username[0]} 欢迎你</p>`)
-    $("#zhuce").html("退出")
+  let uid = 68590
+  let arr1 = ""
+  if (search != "") {
+    arr1 = search.split("=")
+    let username1 = arr1[1].split("&")
+    uid = username1[1]
+    if (username1[0]) {
+      $("#login").html(`<p>${username1[0]} 欢迎你</p>`)
+      $("#zhuce").html("退出")
+    }
   }
 
+  $("#zhuce").click(function () {
+    if ($("#zhuce").text() == "注册") {
+      location.href = "register.html"
+    } else {
+      $("#login").html("登录")
+      $("#zhuce").html("注册")
+      location.href = "index.html"
+    }
+  })
+
+
+
+
+
+  /* let search = window.location.search
+  let username = search.split("=")
+
+  if (username[1]) {
+    $("#login").html(`<p>${username[1]} 欢迎你</p>`)
+    $("#zhuce").html("退出")
+  } */
   let arr = ["手机", "智慧屏", "智能穿戴", "耳机音箱", "电脑", "平板", "智能路由", "配件", "生态产品", "家用电器", "美食酒饮", "增值服务/企业商用"]
   let obj = { srcImg: "img/navlist.png", name: "HuaWieMate系列" }
   function unScroll() {//禁用滚动条
@@ -135,8 +158,8 @@ $(function () {
     $(e.target).css({ fontSize: "24px", color: "#000" }).siblings().css({ fontSize: "20px" })
   })
 
-  function getData(num, id, uid) {//获取列表数据
-    $.get({ url: `http://jx.xuzhixiang.top/ap/api/productlist.php?pagesize=8&pagenum=${num}`, data: { uid } }, (res) => {
+  function getData(num, id) {//获取列表数据
+    $.get({ url: `http://jx.xuzhixiang.top/ap/api/productlist.php?pagesize=8&pagenum=${num}`, data: { uid: 68590 } }, (res) => {
       //console.log(res.data);
       let str = '';
       let data = res.data;
@@ -267,7 +290,9 @@ $(function () {
     }
 
   })
-
+  $("#gouwuFloat").click(function () {
+    location.href = `car.html?uid=${uid}`
+  })
 
 
 })

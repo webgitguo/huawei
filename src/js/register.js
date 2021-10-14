@@ -21,7 +21,7 @@ $(function () {
       { username: $("#username").val(), password: $("#password").val() },
       (res) => {
         console.log(res)
-        //location.href = "login.html"
+        location.href = "login.html"
       })
   })
 })

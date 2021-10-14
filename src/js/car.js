@@ -1,5 +1,8 @@
 $(function () {
-  $.get(`http://jx.xuzhixiang.top/ap/api/cart-list.php?id=69059`, (res) => {
+  let search = window.location.search
+  let arr2 = search.split("=")
+
+  $.get(`http://jx.xuzhixiang.top/ap/api/cart-list.php?id=${arr2[1]}`, (res) => {
     console.log(res)//查询购物车数据
     let data = res.data
 
@@ -47,7 +50,9 @@ $(function () {
 
         //Oul.removeChild($(".List").get(i));
         console.log($(this))
+        //$(".List").eq(i).remove()
         $(".List").eq(i).empty();
+
         $(".ck").eq(i).checked = false;
         //删数据  id  delete
         console.log($(".List"))
