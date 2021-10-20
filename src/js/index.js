@@ -6,6 +6,7 @@ $(function () {
     arr1 = search.split("=")
     let username1 = arr1[1].split("&")
     uid = username1[1]
+    console.log(username1)
     if (username1[0]) {
       $("#login").html(`<p>${username1[0]} 欢迎你</p>`)
       $("#zhuce").html("退出")
@@ -21,14 +22,8 @@ $(function () {
       location.href = "index.html"
     }
   })
-
-
-
-
-
   /* let search = window.location.search
   let username = search.split("=")
-
   if (username[1]) {
     $("#login").html(`<p>${username[1]} 欢迎你</p>`)
     $("#zhuce").html("退出")
@@ -125,8 +120,6 @@ $(function () {
   `
     $(".layui-rowCont2").append(str3)
   }
-
-
   $(window).scroll(function () {
     let srocl = $(document).scrollTop()
     //console.log(srocl)
@@ -267,7 +260,6 @@ $(function () {
     })
   })
   $.get(`http://jx.xuzhixiang.top/ap/api/cart-list.php?id=${uid}`, (res) => {
-
     let data = res.data
     let str = ""
     for (let i = 0; i < data.length; i++) {
@@ -288,12 +280,9 @@ $(function () {
       $("#gouwuIcon").css({ display: "block" })
       $("#gouwuIcon").text(data.length)
     }
-
   })
   $("#gouwuFloat").click(function () {
     location.href = `car.html?uid=${uid}`
   })
-
-
 })
 

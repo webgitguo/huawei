@@ -61,9 +61,15 @@ $(function () {
     $.get("http://jx.xuzhixiang.top/ap/api/login.php",
       { username: $("#username").val(), password: $("#password").val() },
       (res) => {
+
+        alert(res.msg)
+
+
         document.cookie = "id=" + res.data.id;
         location.href = `index.html?username=${res.data.username}&${res.data.id}`
         console.log(res)
+
+
       })
   })
 

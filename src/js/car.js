@@ -32,6 +32,7 @@ $(function () {
       let pid = data[i].pid
       console.log(uid)
       $(".minus").eq(i).click(function () {
+
         num[i].value--;
         $(".perTotalPrice").eq(i).text(data[i].pprice * num[i].value)
         $.get(" http://jx.xuzhixiang.top/ap/api/cart-update-num.php", { uid: uid, pid: pid, pnum: num[i].value }, (res) => {

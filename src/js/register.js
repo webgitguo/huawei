@@ -20,6 +20,7 @@ $(function () {
     $.get("http://jx.xuzhixiang.top/ap/api/reg.php",
       { username: $("#username").val(), password: $("#password").val() },
       (res) => {
+        alert(res.msg)
         console.log(res)
         location.href = "login.html"
       })

@@ -62,7 +62,7 @@
               <a href="login.html" class="layui-navLast" id="login">请登录</a>
             </li>
             <li class="layui-nav-item">
-              <a href="javascript:" id="zhuce">注册</a>
+              <a href="register.html" id="zhuce">注册</a>
             </li>
             <li class="layui-nav-item"><a href="">我的订单</a></li>
             <li class="layui-nav-item layui-navColor">
@@ -408,7 +408,7 @@
         </div>
       </div>
       <div class="float">
-        <a href="javascript:void(0)" id="gouwuFloat">
+        <a href="car.html">
           <span id="gouwuIcon"></span>
           <svg class="icon gouwu" aria-hidden="true">
             <use xlink:href="#icon-gouwuche2"></use>
@@ -440,9 +440,9 @@
     $("#foot").load("./commonFoot.html");
     layui.use("element", function () {
       var element = layui.element;
-
       //…
     });
+
     layui.use(["carousel", "form"], function () {
       var carousel = layui.carousel,
         form = layui.form;
@@ -455,7 +455,6 @@
       });
       carousel.render({
         elem: "#test2",
-
         width: "100%",
         height: "100px",
         interval: 4000,
